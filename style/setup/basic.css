@@ -43,9 +43,11 @@ main {
 .work-space{
     flex-grow: 1;
     position: relative;
-    background-color: rgb(143, 84, 84);
+    background-color: #8f54540a;
+
 }
 
 .square{
     position: absolute;
+
 }
