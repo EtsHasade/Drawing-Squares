@@ -44,10 +44,12 @@ main {
     flex-grow: 1;
     position: relative;
     background-color: #8f54540a;
+    cursor: crosshair;
 
 }
 
 .square{
     position: absolute;
+    cursor: not-allowed;
 
 }
