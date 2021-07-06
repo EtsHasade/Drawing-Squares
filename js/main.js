@@ -31,11 +31,14 @@ function renderSquares() {
         `        
         return `
         <div class="square" data-id="${square.id}"
-        style="${squareStyle}"></div>
+        style="${squareStyle}" ></div>
         `
     }).join('')
 
     gElWorkSpace.innerHTML = strHtml;
+    document.querySelectorAll('.square').forEach(elSquare=>{
+        elSquare.addEventListener('contextmenu',onRemoveSquare)
+    });
 }
 
 function onStartPoint(ev) {
@@ -52,4 +55,11 @@ function onStartPoint(ev) {
         
     }
 
+}
+
+function onRemoveSquare(ev) {
+    // console.log("🚀 ~ file: main.js ~ line 58 ~ onRemoveSquare ~ ev", ev)
+    ev.preventDefault()
+    squareServise.removeSquare(ev.target.dataset.id)
+    renderSquares()
 }

@@ -43,13 +43,17 @@ main {
 .work-space{
     flex-grow: 1;
     position: relative;
-    background-color: #8f54540a;
+    background-color: #fdf9f4bb;
     cursor: crosshair;
 
 }
 
 .square{
     position: absolute;
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
+    pointer-events: none;
+}
 
+.square:hover{
+    background-color: rgba(138, 194, 240, 0.877);
 }

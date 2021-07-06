@@ -8,6 +8,7 @@ export default {
     createSquares,
     addSquare,
     getSquareForDisplay,
+    removeSquare
 
 }
 
@@ -22,8 +23,14 @@ function getSquareForDisplay() {
     return gSquares.slice();
 }
 
+function removeSquare(squareId) {
+    const idx = gSquares.findIndex(square => square.id === squareId);
+    gSquares.splice(idx,1);
+    _saveSquares()
+}
 
-function addSquare(startX, startY, endX, endY, color = '#222222') {
+
+function addSquare(startX, startY, endX, endY, color = '#0c1e2eb0') {
     const square = _createSquare(startX, startY, endX, endY, color)
     gSquares.push(square)
     _saveSquares()
